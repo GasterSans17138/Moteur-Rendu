@@ -1,0 +1,316 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\Resources">
+      <UniqueIdentifier>{50f2f8e7-493c-4a2a-bb42-9bdb4b57a99f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Resources">
+      <UniqueIdentifier>{26bd7ca3-7f1b-4dcc-8103-f7d8cda061c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\DataStructure">
+      <UniqueIdentifier>{34c88866-789c-4b41-908f-12061d025e34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Debug">
+      <UniqueIdentifier>{5976942c-1310-4402-be21-a6d1429904de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\ImGui">
+      <UniqueIdentifier>{89426b9d-e2a4-43a3-aeb0-0f6b0b052ea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\LowRenderer">
+      <UniqueIdentifier>{bc5215e7-998f-4d68-92ed-5932e512cef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Maths">
+      <UniqueIdentifier>{d5499b3e-a379-4e45-bf96-371a85ed9259}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\Physics">
+      <UniqueIdentifier>{71715a8c-c12a-477c-ae3e-4e1169731288}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\DataStructure">
+      <UniqueIdentifier>{1a24d98e-6f6c-49ab-8ed2-b317339e658a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Maths">
+      <UniqueIdentifier>{706f4fd2-68ec-4c76-9ac6-fdd04ee84357}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Debug">
+      <UniqueIdentifier>{3cc41102-2493-492a-b47c-a5bbaa733dfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\ImGui">
+      <UniqueIdentifier>{2dfdfde8-b0e7-43d2-81db-d96e6fcb6b51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\LowRenderer">
+      <UniqueIdentifier>{d7f0c65c-9742-48b6-b8ae-19755056e154}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\Physics">
+      <UniqueIdentifier>{e186f644-7272-4d51-8974-72b37fe04e90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Obj">
+      <UniqueIdentifier>{9e461be7-8d86-4976-bd0b-2fccfb12f69e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Scripts">
+      <UniqueIdentifier>{06b181e8-54a5-4939-b824-c70f58e0fcdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Scripts\EnginePy">
+      <UniqueIdentifier>{05d8f740-6101-4f83-8554-6025774a7388}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Shaders">
+      <UniqueIdentifier>{c608d5ba-4380-44b9-b438-692629315a09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Textures">
+      <UniqueIdentifier>{84344795-d597-40cc-b353-2ebd8549ef8d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Sources\main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\glad.c">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\App.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Player.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Menu.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DataStructure\GameObject.cpp">
+      <Filter>Fichiers sources\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\DataStructure\Graph.cpp">
+      <Filter>Fichiers sources\DataStructure</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Maths\Mat4.cpp">
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Maths\Vec4.cpp">
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Maths\Vec2.cpp">
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Maths\Vec3.cpp">
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Maths\Primitive.cpp">
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Maths\TestMath.cpp">
+      <Filter>Fichiers sources\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Debug\Log.cpp">
+      <Filter>Fichiers sources\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui_demo.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui_draw.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui_impl_glfw.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui_impl_opengl3.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui_tables.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\ImGUI\imgui_widgets.cpp">
+      <Filter>Fichiers sources\ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\LowRenderer\Camera.cpp">
+      <Filter>Fichiers sources\LowRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\LowRenderer\Light.cpp">
+      <Filter>Fichiers sources\LowRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\LowRenderer\Mesh.cpp">
+      <Filter>Fichiers sources\LowRenderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Physics\Transform.cpp">
+      <Filter>Fichiers sources\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Physics\Collider.cpp">
+      <Filter>Fichiers sources\Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources\Texture.cpp">
+      <Filter>Fichiers sources\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources\Shader.cpp">
+      <Filter>Fichiers sources\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources\ResourceManager.cpp">
+      <Filter>Fichiers sources\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources\Model.cpp">
+      <Filter>Fichiers sources\Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="Sources\Resources\ScriptPy.cpp">
+      <Filter>Fichiers sources\Resources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Headers\App.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Player.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Menu.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\PlayerCommon.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\IResource.hpp">
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\Model.hpp">
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\ResourceManager.hpp">
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\Shader.hpp">
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\Texture.hpp">
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DataStructure\GameObject.hpp">
+      <Filter>Fichiers d%27en-tête\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\DataStructure\Graph.hpp">
+      <Filter>Fichiers d%27en-tête\DataStructure</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Debug\Assertion.hpp">
+      <Filter>Fichiers d%27en-tête\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Debug\Log.hpp">
+      <Filter>Fichiers d%27en-tête\Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imconfig.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imgui.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imgui_impl_glfw.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imgui_impl_opengl3.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imgui_impl_opengl3_loader.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imgui_internal.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imstb_rectpack.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imstb_textedit.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\ImGUI\imstb_truetype.h">
+      <Filter>Fichiers d%27en-tête\ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\LowRenderer\Camera.hpp">
+      <Filter>Fichiers d%27en-tête\LowRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\LowRenderer\Light.hpp">
+      <Filter>Fichiers d%27en-tête\LowRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\LowRenderer\Mesh.hpp">
+      <Filter>Fichiers d%27en-tête\LowRenderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Maths\Vec4.hpp">
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Maths\Vec2.hpp">
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Maths\Vec3.hpp">
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Maths\TestMath.hpp">
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Maths\Primitive.hpp">
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Maths\Mat4.hpp">
+      <Filter>Fichiers d%27en-tête\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Physics\Transform.hpp">
+      <Filter>Fichiers d%27en-tête\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Physics\Collider.hpp">
+      <Filter>Fichiers d%27en-tête\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Headers\Resources\ScriptPy.hpp">
+      <Filter>Fichiers d%27en-tête\Resources</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scripts\Hello.py">
+      <Filter>Fichiers de ressources\Scripts</Filter>
+    </None>
+    <None Include="Resources\Scripts\PlayerControls.py">
+      <Filter>Fichiers de ressources\Scripts</Filter>
+    </None>
+    <None Include="Resources\Shaders\shader.vert">
+      <Filter>Fichiers de ressources\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\collider.frag">
+      <Filter>Fichiers de ressources\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\collider.vert">
+      <Filter>Fichiers de ressources\Shaders</Filter>
+    </None>
+    <None Include="Resources\Shaders\shader.frag">
+      <Filter>Fichiers de ressources\Shaders</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\cat.png">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\chocobo.png">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\dog.png">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\ferdinand.png">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\Gordo.png">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\potatOS.png">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Textures\wall.jpg">
+      <Filter>Fichiers de ressources\Textures</Filter>
+    </Image>
+  </ItemGroup>
+</Project>
