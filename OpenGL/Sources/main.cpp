@@ -1,16 +1,19 @@
+
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include "Math.hpp"
+#include <string>
+#include <iostream>
+#include "App.hpp"
+#include <iostream>
+#include <map>
 
-#include <Python.h>
-#include <pybind11/include/pybind11/pybind11.h>
-
-#include <App.hpp>
-#include <Maths/TestMath.hpp>
-
-using namespace Core;
 
 void framebuffer_size_callback(GLFWwindow* window, int width, int height);
+void processInput(GLFWwindow* window);
 
+using namespace std;
+using namespace Core::myMath;
 
 void APIENTRY glDebugOutput(GLenum source, GLenum type, GLuint id, GLenum severity, GLsizei length, const GLchar* message, const void* userParam)
 {
@@ -57,33 +60,29 @@ void APIENTRY glDebugOutput(GLenum source, GLenum type, GLuint id, GLenum severi
 
 int main()
 {
-	#ifdef DEBUG
-		MathTests();
-	#endif // DEBUG
-
+	
+	
+	
+	using namespace Core;
 	AppInitializer init =
 	{
-		1200, 900,
+		2400, 1200,
 		4, 5,
-		"BindingPython",
+		(char*)"Learning OpenGL" ,
 		framebuffer_size_callback,
 		glDebugOutput
 	};
 
 	App app;
+	app.Init(init);
+	app.Update();
 
-	if (!app.Init(init))
-		return -1;
 	
-	app.InitResources();
 
-	// render loop
-	// -----------
-	while (!glfwWindowShouldClose(app.Window))
-		app.Update();
-
+	
 	return 0;
 }
+
 
 // glfw: whenever the window size changed (by OS or user resize) this callback function executes
 // ---------------------------------------------------------------------------------------------

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -24,13 +24,12 @@
     <ProjectGuid>{899213ee-72a1-400f-9a48-02fe754bfa4a}</ProjectGuid>
     <RootNamespace>OpenGL</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>BindingPython</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -73,26 +72,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <ExternalIncludePath>C:\Program Files\Python37\include;$(ProjectDir)Headers;$(ProjectDir)Includes;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <ExternalIncludePath>C:\Program Files\Python37\include;$(ProjectDir)Headers;$(ProjectDir)Includes;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>$(ProjectDir)Includes;$(IncludePath)</IncludePath>
     <LibraryPath>$(ProjectDir)Libs;$(LibraryPath)</LibraryPath>
-    <ExternalIncludePath>C:\Program Files\Python37\include;$(ProjectDir)Headers;$(ProjectDir)Includes;$(ExternalIncludePath)</ExternalIncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(ProjectDir)Includes;$(IncludePath);C:\Program Files\Python37\include</IncludePath>
-    <LibraryPath>$(ProjectDir)Libs;$(LibraryPath);C:\Program Files\Python37\libs</LibraryPath>
-    <IncludePath>$(ProjectDir)Includes;$(IncludePath);$(ProjectDir)Includes\Pybind11\include;C:\Program Files\Python37\include;C:\Users\t.samson\Desktop\2022_gp_2026_gp_2026python-scripting-tangui_alexandre_g_elliot\EnginePy\extern\pybind11\include</IncludePath>
-    <LibraryPath>$(ProjectDir)Libs;C:\Program Files\Python37\libs;$(LibraryPath)</LibraryPath>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\$(ProjectName)\</OutDir>
-    <ExternalIncludePath>C:\Program Files\Python37\include;$(ProjectDir)Headers;$(ProjectDir)Includes;$(ExternalIncludePath)</ExternalIncludePath>
+    <IncludePath>$(ProjectDir)Includes;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Libs;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -128,7 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers;%(AdditionalIncludeDirectories);$(ProjectDir)Headers/ImGUI</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;$(ProjectDir)ImGui;$(ProjectDir)Headers//LowRenderer;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -145,7 +137,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)Headers;%(AdditionalIncludeDirectories);$(ProjectDir)Headers/ImGUI</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
@@ -157,90 +149,105 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Headers\Respawn.hpp" />
+    <ClCompile Include="Sources\CameraBehaviour.cpp" />
+    <ClCompile Include="Sources\CharacterMouvement.cpp" />
+    <ClCompile Include="Sources\Collider.cpp" />
+    <ClCompile Include="Sources\Collision.cpp" />
+    <ClCompile Include="Sources\CollisionDisplay.cpp" />
+    <ClCompile Include="Sources\GameObject.cpp" />
+    <ClCompile Include="Sources\MainMenu.cpp" />
+    <ClCompile Include="Sources\Material.cpp" />
+    <ClCompile Include="Sources\NavigateKeyboard.cpp" />
+    <ClCompile Include="Sources\Respawn.cpp" />
+    <ClCompile Include="Sources\RigidBody.cpp" />
+    <ClCompile Include="Sources\Scene.cpp" />
+    <ClCompile Include="Sources\ShaderProgram.cpp" />
+    <ClCompile Include="ImGui\imgui.cpp" />
+    <ClCompile Include="ImGui\imgui_demo.cpp" />
+    <ClCompile Include="ImGui\imgui_draw.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_glfw.cpp" />
+    <ClCompile Include="ImGui\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="ImGui\imgui_tables.cpp" />
+    <ClCompile Include="ImGui\imgui_widgets.cpp" />
     <ClCompile Include="Sources\App.cpp" />
-    <ClCompile Include="Sources\DataStructure\GameObject.cpp" />
-    <ClCompile Include="Sources\DataStructure\Graph.cpp" />
+    <ClCompile Include="Sources\Camera.cpp" />
+    <ClCompile Include="Sources\Debug.cpp" />
     <ClCompile Include="Sources\glad.c" />
-    <ClCompile Include="Sources\Debug\Log.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui_demo.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui_draw.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui_impl_glfw.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui_impl_opengl3.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui_tables.cpp" />
-    <ClCompile Include="Sources\ImGUI\imgui_widgets.cpp" />
-    <ClCompile Include="Sources\LowRenderer\Camera.cpp" />
-    <ClCompile Include="Sources\LowRenderer\Light.cpp" />
-    <ClCompile Include="Sources\LowRenderer\Mesh.cpp" />
+    <ClCompile Include="Sources\Input.cpp" />
+    <ClCompile Include="Sources\Light.cpp" />
     <ClCompile Include="Sources\main.cpp" />
-    <ClCompile Include="Sources\Maths\Mat4.cpp" />
-    <ClCompile Include="Sources\Maths\Primitive.cpp" />
-    <ClCompile Include="Sources\Maths\Vec2.cpp" />
-    <ClCompile Include="Sources\Maths\Vec3.cpp" />
-    <ClCompile Include="Sources\Maths\Vec4.cpp" />
-    <ClCompile Include="Sources\Menu.cpp" />
-    <ClCompile Include="Sources\Physics\Collider.cpp" />
-    <ClCompile Include="Sources\Physics\Transform.cpp" />
-    <ClCompile Include="Sources\Player.cpp" />
-    <ClCompile Include="Sources\Resources\Model.cpp" />
-    <ClCompile Include="Sources\Resources\ResourceManager.cpp" />
-    <ClCompile Include="Sources\Maths\TestMath.cpp" />
-    <ClCompile Include="Sources\Resources\ScriptPy.cpp" />
-    <ClCompile Include="Sources\Resources\Shader.cpp" />
-    <ClCompile Include="Sources\Resources\Texture.cpp" />
+    <ClCompile Include="Sources\Mesh.cpp" />
+    <ClCompile Include="Sources\Model.cpp" />
+    <ClCompile Include="Sources\Renderer.cpp" />
+    <ClCompile Include="Sources\ResourceManager.cpp" />
+    <ClCompile Include="Sources\Shader.cpp" />
+    <ClCompile Include="Sources\Texture.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Headers\CameraBehaviour.hpp" />
+    <ClInclude Include="Headers\CharacterMouvement.hpp" />
     <ClInclude Include="Headers\App.hpp" />
-    <ClInclude Include="Headers\DataStructure\GameObject.hpp" />
-    <ClInclude Include="Headers\DataStructure\Graph.hpp" />
-    <ClInclude Include="Headers\Debug\Assertion.hpp" />
-    <ClInclude Include="Headers\ImGUI\imconfig.h" />
-    <ClInclude Include="Headers\ImGUI\imgui.h" />
-    <ClInclude Include="Headers\ImGUI\imgui_impl_glfw.h" />
-    <ClInclude Include="Headers\ImGUI\imgui_impl_opengl3.h" />
-    <ClInclude Include="Headers\ImGUI\imgui_impl_opengl3_loader.h" />
-    <ClInclude Include="Headers\ImGUI\imgui_internal.h" />
-    <ClInclude Include="Headers\ImGUI\imstb_rectpack.h" />
-    <ClInclude Include="Headers\ImGUI\imstb_textedit.h" />
-    <ClInclude Include="Headers\ImGUI\imstb_truetype.h" />
+    <ClInclude Include="Headers\Collision.hpp" />
+    <ClInclude Include="Headers\CollisionDisplay.hpp" />
+    <ClInclude Include="Headers\Debug.hpp" />
+    <ClInclude Include="Headers\Input.hpp" />
+    <ClInclude Include="Headers\Interface.hpp" />
+    <ClInclude Include="Headers\Light.hpp" />
     <ClInclude Include="Headers\LowRenderer\Camera.hpp" />
     <ClInclude Include="Headers\LowRenderer\Light.hpp" />
+    <ClInclude Include="Headers\MainMenu.hpp" />
+    <ClInclude Include="Headers\Material.hpp" />
     <ClInclude Include="Headers\LowRenderer\Mesh.hpp" />
-    <ClInclude Include="Headers\Maths\Primitive.hpp" />
-    <ClInclude Include="Headers\Menu.hpp" />
-    <ClInclude Include="Headers\Physics\Collider.hpp" />
-    <ClInclude Include="Headers\Physics\Transform.hpp" />
-    <ClInclude Include="Headers\Player.hpp" />
-    <ClInclude Include="Headers\PlayerCommon.hpp" />
-    <ClInclude Include="Headers\Resources\IResource.hpp" />
-    <ClInclude Include="Headers\Debug\Log.hpp" />
-    <ClInclude Include="Headers\Maths\Mat4.hpp" />
-    <ClInclude Include="Headers\Resources\Model.hpp" />
-    <ClInclude Include="Headers\Resources\ResourceManager.hpp" />
-    <ClInclude Include="Headers\Maths\TestMath.hpp" />
-    <ClInclude Include="Headers\Maths\Vec2.hpp" />
-    <ClInclude Include="Headers\Maths\Vec3.hpp" />
-    <ClInclude Include="Headers\Maths\Vec4.hpp" />
-    <ClInclude Include="Headers\Resources\ScriptPy.hpp" />
-    <ClInclude Include="Headers\Resources\Shader.hpp" />
-    <ClInclude Include="Headers\Resources\Texture.hpp" />
+    <ClInclude Include="Headers\LowRenderer\Renderer.h" />
+    <ClInclude Include="Headers\NavigateKeyboard.h" />
+    <ClInclude Include="Headers\RigidBody.hpp" />
+    <ClInclude Include="Headers\ShaderProgram.hpp" />
+    <ClInclude Include="Headers\Model.hpp" />
+    <ClInclude Include="Headers\ResourceManager.hpp" />
+    <ClInclude Include="Headers\Resource.h" />
+    <ClInclude Include="Headers\Scene.hpp" />
+    <ClInclude Include="Headers\Shader.hpp" />
+    <ClInclude Include="Headers\Texture.hpp" />
+    <ClInclude Include="Headers\Time.hpp" />
+    <ClInclude Include="ImGui\imconfig.h" />
+    <ClInclude Include="ImGui\imgui.h" />
+    <ClInclude Include="ImGui\imgui_impl_glfw.h" />
+    <ClInclude Include="ImGui\imgui_impl_opengl3.h" />
+    <ClInclude Include="ImGui\imgui_impl_opengl3_loader.h" />
+    <ClInclude Include="ImGui\imgui_internal.h" />
+    <ClInclude Include="ImGui\imstb_rectpack.h" />
+    <ClInclude Include="ImGui\imstb_textedit.h" />
+    <ClInclude Include="ImGui\imstb_truetype.h" />
+    <ClInclude Include="Includes\Math.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Scripts\Hello.py" />
-    <None Include="Resources\Scripts\PlayerControls.py" />
-    <None Include="Resources\Shaders\collider.frag" />
-    <None Include="Resources\Shaders\collider.vert" />
-    <None Include="Resources\Shaders\shader.frag" />
-    <None Include="Resources\Shaders\shader.vert" />
+    <None Include="Resources\Shaders\FragmentShader.frag">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+    <None Include="Resources\Shaders\VertexShader.vert">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="Resources\Textures\cat.png" />
-    <Image Include="Resources\Textures\chocobo.png" />
-    <Image Include="Resources\Textures\dog.png" />
-    <Image Include="Resources\Textures\ferdinand.png" />
-    <Image Include="Resources\Textures\Gordo.png" />
-    <Image Include="Resources\Textures\potatOS.png" />
+    <Image Include="Resources\Textures\BelugaCursed.png" />
+    <Image Include="Resources\Textures\BippaDh.png" />
+    <Image Include="Resources\Textures\BlazikenTexture.png" />
+    <Image Include="Resources\Textures\boo.png" />
+    <Image Include="Resources\Textures\DefaultTex.png" />
+    <Image Include="Resources\Textures\Error_Icone.png" />
+    <Image Include="Resources\Textures\Escape_from_tarkov.jpg" />
+    <Image Include="Resources\Textures\goomba.png" />
+    <Image Include="Resources\Textures\heyho_tex_hr.png" />
+    <Image Include="Resources\Textures\Message_Icone.png" />
+    <Image Include="Resources\Textures\sample.png" />
+    <Image Include="Resources\Textures\sample2.png" />
+    <Image Include="Resources\Textures\Silvia-Seal.png" />
+    <Image Include="Resources\Textures\Skybox.png" />
+    <Image Include="Resources\Textures\sol.png" />
     <Image Include="Resources\Textures\wall.jpg" />
+    <Image Include="Resources\Textures\WaluigiBody.png" />
+    <Image Include="Resources\Textures\Warning_Icone.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

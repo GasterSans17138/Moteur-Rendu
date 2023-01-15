@@ -1,8 +1,0 @@
-[submodule "EnginePy/extern/pybind11"]
-	path = EnginePy/extern/pybind11
-	url = https://github.com/pybind/pybind11.git
-	branch = stable
-[submodule "OpenGL/Headers/pybind11"]
-	path = OpenGL/Headers/pybind11
-	url = https://github.com/pybind/pybind11.git
-	branch = stable

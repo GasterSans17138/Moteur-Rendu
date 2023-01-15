@@ -1,71 +1,36 @@
 #pragma once
-#include <Maths/Vec3.hpp>
-#include <Maths/Vec4.hpp>
-
-using namespace Core::Maths;
+#include "Math.hpp"
+#include "Scene.hpp"
 
 namespace LowRenderer
 {
-	class Light
+	class Light : public Core::DataStructure::MonoBehaviour
 	{
-	public:
-		Vec4 AmbientColor;
-		Vec4 DiffuseColor;
-		Vec4 SpecularColor;
+	public :
 
-	public:
-		Light(const Vec4& ambient, const Vec4& diffuse, const Vec4& specular);
-	};
+		enum class LightType : int
+		{
+			L_DIRECTIONAL = 0,
+			L_POINT = 1,
+			L_SPOT = 2
+		};
 
-	class DirectionalLight : public Light
-	{
-	public:
-		Vec3 Direction;
+		Light(int _type);
 
-	public:
-		DirectionalLight(
-			const Vec3& direction = Vec3(0.f, 0.f, 0.f),
-			const Vec4& ambient = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec4& diffuse = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec4& specular = Vec4(1.f, 1.f, 1.f, 1.f)
-		);
-	};
+		void Start() override;
+		void Update() override;
+		void DisplayGUI() override;
+		void Render(int i);
+		void Destroy() override;
 
-	class PointLight : public Light
-	{
-	public:
-		Vec3 Position;
-		Vec3 AttenuationValues; // Constant, Linear, Quadratic
+		LightType type;
+		
+		float linearAttenuation, constantAttenuation, quadraticAttenuation;
+		float spotCutoff;
 
-	public:
-		PointLight(
-			const Vec3& position = Vec3(0.f, 0.f, 0.f),
-			const Vec4& ambient = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec4& diffuse = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec4& specular = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec3& attenuationValues = Vec3(1.f, 0.09f, 0.032f)
-		);
-	};
+		static Core::myMath::Vec4 ambientColor;
+		Core::myMath::Vec3 color;
+		float intensity;
 
-	class SpotLight : public Light
-	{
-	public:
-		Vec3 Position;
-		Vec3 Direction;
-		Vec3 AttenuationValues; // Constant, Linear, Quadratic
-		float InnerCutOff; // Put the cosine of the desired angle
-		float OuterCutOff; // Same
-
-	public:
-		SpotLight(
-			const Vec3& position = Vec3(0.f, 0.f, 0.f),
-			const Vec3& direction = Vec3(0.f, 0.f, 0.f),
-			const float innerCutOff = 0.f,
-			const float outerCutOff = 0.f,
-			const Vec4& ambient = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec4& diffuse = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec4& specular = Vec4(1.f, 1.f, 1.f, 1.f),
-			const Vec3& attenuationValues = Vec3(1.f, 0.09f, 0.032f)
-		);
 	};
 }
